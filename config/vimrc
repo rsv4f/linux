@@ -1,0 +1,51 @@
+set nocompatible              "  be iMproved, required
+filetype on                  "  required
+set rtp+=~/.vim/bundle/Vundle.vim  "change route
+call vundle#begin()
+
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/syntastic'
+Plugin 'git://git.wincent.com/command-t.git' 
+Plugin 'rstacruz/sparkup' , {' rtp' : ' vim/' }
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax' 
+Plugin 'vimwiki/vimwiki'
+
+call vundle#end()            "  required
+filetype plugin indent on    "  required
+set spell spelllang=en_us
+set tabstop=4 shiftwidth=4 expandtab "Ctrl-V<Tab>"
+syntax on
+set number 
+
+inoremap ' ''<Esc>i
+inoremap " ""<Esc>i
+inoremap { {}<Esc>i
+inoremap [ []<Esc>i
+inoremap ( ()<Esc>i
+
+"move between split windows using alt + arrow key"
+imap jj <Esc>
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
+set mousefocus
+
+"default syntatic settings"
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+
+"youcompleteme conf file >> helpfulr for c++ autocomplete
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
+
+let g:vimwiki_list = [{'path': '~/OneDrive/Wiki/', 'syntax': 'markdown', 'ext': '.md'},{'path': '~/OneDrive/myScripts.wiki/', 'syntax': 'markdown', 'ext':   '.md'}]
