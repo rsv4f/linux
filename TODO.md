@@ -12,19 +12,21 @@
   
       $ ./install.py --clang-completer --ts-completer
 
-- [ ] VPN
+[ ] Unreal Engine 
 
-- [ ] VMware
+[ ] VPN
 
-- [ ] VS Code
+[ ] VMware
 
-- [ ] DNS for ad blocking
+[ ] VS Code
 
-- [ ] Arduino system user
+[ ] DNS for ad blocking
 
-- [ ] Nvidia Driver(s)
+[ ] Arduino system user
 
-- [ ] OS extensions 
+[ ] Nvidia Driver(s)
+
+[ ] OS extensions 
 
   - plank
 
@@ -36,10 +38,6 @@
   
   - caffeine
   
-  - bluetooth connection
+  - bluetooth quick connection
   
   - audio output selector
-  
-## Maybe
-
-- Unreal Engine 
